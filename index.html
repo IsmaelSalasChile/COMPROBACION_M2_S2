@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Reserva Hora Médica</title>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+    <form action="redireccion.html" method="post">
+        <p><label for="nombre">NOMBRE</label><br>
+        <input type="text" name="nombre" id="nombre"></p>
+        
+
+        <p><label for="direccion">DIRECCIÓN</label><br>
+        <input type="text" name="direccion" id="direccion"></p>
+
+        <p><label for="lista">ESPECIALIDAD MÉDICA</label><br>
+        <input type="text" name="lista" list="especialidad"></p>
+        <datalist id="especialidad">
+            <option value="MEDICINA INTERNA"></option>
+            <option value="MEDICINA GENERAL"></option>
+            <option value="TRAUMATOLOGÍA"></option>
+            <option value="NUTRICIONISTA"></option>
+        </datalist>
+
+        <p><label for="fecha">FECHA</label><br>
+        <input type="date"></p>
+
+        <p><label for="hora">HORA</label><br>
+        <input type="time"></p>
+
+        <p><label for="correo">CORREO</label><br>
+        <input type="email" name="correo" id="correo"></p>
+
+        <p><button>CONFIRMAR</button></p>
+    </form>
+</body>
+</html>
