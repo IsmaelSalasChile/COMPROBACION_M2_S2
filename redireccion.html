@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva confirmada</title>
+    <script>
+        window.onload = function () {
+            let muestraMensaje = false;
+            let mensaje = "";
+            const searchParams = new URLSearchParams(window.location.search);
+            if (searchParams.has("nombre")) {
+                const name = searchParams.get("nombre");
+                console.log(name);
+                muestraMensaje = true;
+                mensaje += "<p>El nombre es " + name + "</p>";
+            }
+            if (searchParams.has("direccion")) {
+                const direccion = searchParams.get("direccion");
+                console.log(direccion);
+                muestraMensaje = true;
+                mensaje += "<p>La dirección es " + direccion + "</p>";
+            }
+            if (searchParams.has("lista")) {
+                const lista = searchParams.get("lista");
+                console.log(lista);
+                muestraMensaje = true;
+                mensaje += "<p>La especialidad es " + lista + "</p>";
+            }
+            if (searchParams.has("fecha")) {
+                const fecha = searchParams.get("fecha");
+                console.log(fecha);
+                muestraMensaje = true;
+                mensaje += "<p>La fecha es " + fecha + "</p>";
+            }
+            if (searchParams.has("hora")) {
+                const hora = searchParams.get("hora");
+                console.log(hora);
+                muestraMensaje = true;
+                mensaje += "<p>La hora es " + hora + "</p>";
+            }
+            if (searchParams.has("correo")) {
+                const correo = searchParams.get("correo");
+                console.log(correo);
+                muestraMensaje = true;
+                mensaje += "<p>El correo es " + correo + "</p>";
+            }
+            if (muestraMensaje) {
+                document.getElementById("info").innerHTML = mensaje;
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1>Gracias por preferirnos.</h1>
-    <h1>Su hora ya ha sido agendada.</h1>
+    <div id="info">
+        Gracias por preferirnos.
+    </div>
 </body>
 </html>
